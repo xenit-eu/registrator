@@ -1,0 +1,21 @@
+plugins {
+    id "eu.xenit.docker" version "4.0.3"
+}
+
+ext {
+    registrator = {}
+    registrator.version = "7.1"
+}
+
+dockerFile {
+    dockerFile = file('Dockerfile')
+    dockerBuild {
+        repository = 'hub.xenit.eu/registrator'
+        tags = [project.registrator.version]
+        automaticTags = true
+    }
+}
+
+buildDockerImage {
+}
+
