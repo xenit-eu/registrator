@@ -10,7 +10,7 @@ ext {
 dockerFile {
     dockerFile = file('Dockerfile')
     dockerBuild {
-        repository = 'hub.xenit.eu/registrator'
+        repository = 'hub.xenit.eu/public/registrator'
         tags = [project.registrator.version]
         automaticTags = true
     }
